@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", { message: "Welcome to the Mini Message Board!" });
+  res.render("index", { message: "Mini Message Board!" });
 });
 
 app.listen(PORT, () => {
