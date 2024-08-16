@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  padding: 1rem;
 }
 
 h1 {
@@ -33,10 +34,15 @@ form > button {
   width: 25%;
 }
 
-a {
-  padding-left: 40px;
+li {
+  text-decoration: none;
+  list-style-type: none;
 }
 
-li > a {
+ul {
   padding: 0px;
+}
+
+div.message {
+  margin-bottom: 16px;
 }
