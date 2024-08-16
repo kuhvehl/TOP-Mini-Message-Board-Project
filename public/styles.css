@@ -32,3 +32,11 @@ input {
 form > button {
   width: 25%;
 }
+
+a {
+  padding-left: 40px;
+}
+
+li > a {
+  padding: 0px;
+}
