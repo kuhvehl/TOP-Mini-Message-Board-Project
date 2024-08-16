@@ -9,3 +9,26 @@ h1 {
   text-align: center;
   color: #333;
 }
+
+form {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+}
+
+form > div {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+textarea,
+input {
+  width: 300px;
+}
+
+form > button {
+  width: 25%;
+}
