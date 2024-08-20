@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>Mini Message Board</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <a href="/new">Add a new message</a>
+    <h1>Mini Message Board</h1>
+    <a href="/form">Add a new message</a>
 
     <ul>
-      <% messages.forEach(function(message, index) { %>
+      <% messages.forEach((msg) => { %>
       <li>
-        <strong><%= message.user %>:</strong> <%= message.text %>
-        <em>(<%= message.added.toDateString() %>)</em>
-        <a href="/message/<%= index %>">Open</a>
+        <strong><%= msg.user_name %></strong>: <%= msg.message %>
+        <em>(<%= msg.timestamp %>)</em>
       </li>
-      <% }); %>
+      <% }) %>
     </ul>
   </body>
 </html>
