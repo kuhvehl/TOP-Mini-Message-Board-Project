@@ -25,21 +25,24 @@ function renderForm(req, res) {
   res.render("form");
 }
 
+async function getMessageDetails(req, res) {
+  const { id } = req.params;
+  try {
+    const message = await db.getMessageById(id);
+    if (message) {
+      res.render("message", { message });
+    } else {
+      res.status(404).send("Message not found");
+    }
+  } catch (error) {
+    console.error("Error fetching message details:", error);
+    res.status(500).send("Internal Server Error");
+  }
+}
+
 module.exports = {
   getMessages,
   addMessage,
   renderForm,
+  getMessageDetails,
 };
-
-// const messages = [
-//   {
-//     text: "Hi there!",
-//     user: "Amando",
-//     added: new Date(),
-//   },
-//   {
-//     text: "Hello World!",
-//     user: "Charles",
-//     added: new Date(),
-//   },
-// ];

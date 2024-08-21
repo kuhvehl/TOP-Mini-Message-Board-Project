@@ -15,6 +15,7 @@
       <li>
         <strong><%= msg.user_name %></strong>: <%= msg.message %>
         <em>(<%= msg.timestamp %>)</em>
+        <a href="/message/<%= msg.id %>">Open</a>
       </li>
       <% }) %>
     </ul>
