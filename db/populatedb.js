@@ -17,7 +17,8 @@ VALUES
 
 async function main() {
   console.log("seeding...");
-  const connectionString = process.argv[2] || process.env.DATABASE_URL_LOCAL;
+  const connectionString =
+    process.env.DATABASE_URL || process.env.DATABASE_URL_LOCAL;
 
   const client = new Client({ connectionString });
   await client.connect();
